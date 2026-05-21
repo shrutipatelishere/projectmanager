@@ -216,8 +216,12 @@ const Tasks = () => {
               const overdue = isOverdue(task.dueDate, task.status);
 
               return (
-                <div key={task.id} className={`task-card ${task.status}`}>
-                  <div className="task-checkbox">
+                <div
+                  key={task.id}
+                  className={`task-card ${task.status}`}
+                  onClick={() => setSelectedTask(task)}
+                >
+                  <div className="task-checkbox" onClick={(e) => e.stopPropagation()}>
                     <input
                       type="checkbox"
                       checked={task.status === 'completed'}
@@ -260,6 +264,7 @@ const Tasks = () => {
                       <select
                         className="status-select"
                         value={task.status}
+                        onClick={(e) => e.stopPropagation()}
                         onChange={(e) => handleStatusChange(task.id, e.target.value)}
                       >
                         <option value="todo">To Do</option>
@@ -268,7 +273,7 @@ const Tasks = () => {
                       </select>
                     </div>
                   </div>
-                  <div className="task-actions">
+                  <div className="task-actions" onClick={(e) => e.stopPropagation()}>
                     <div className="menu-container">
                       <button
                         className="menu-trigger"

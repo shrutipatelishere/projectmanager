@@ -89,7 +89,7 @@
   font-size: 1.1rem;
 }
 
-.input-with-icon input {
+.login-form .input-with-icon input {
   width: 100%;
   padding: 0.875rem 1rem 0.875rem 2.75rem;
   border: 1px solid #e2e8f0;
@@ -98,7 +98,7 @@
   transition: all 0.2s;
 }
 
-.input-with-icon input:focus {
+.login-form .input-with-icon input:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
